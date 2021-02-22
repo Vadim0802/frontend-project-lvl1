@@ -1,0 +1,23 @@
+name: linter-check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  linterCheck:
+    runs-on: ununtu-latest
+    steps:
+    - uses: actions/checkout@v2
+      uses: actions/setup-node@v1
+      with: 
+        node-version: '15.x'
+
+    - name: 'install'
+      run: make install
+
+    - name: 'lint'
+      run: make lint
+
+
