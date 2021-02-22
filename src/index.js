@@ -16,12 +16,12 @@ const runGameEngine = (rule, gameData) => {
 
     if (answer !== rightAnswer) {
       print(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-      print(`Let's try again, ${name}`);
+      print(`Let's try again, ${name}!`);
       return;
     }
     print('Correct!');
   }
-  print(`Congratulations, ${name}`);
+  print(`Congratulations, ${name}!`);
 };
 
 export default runGameEngine;
