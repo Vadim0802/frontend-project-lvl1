@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { random } from 'lodash';
 import runGameEngine from '../index.js';
 
 const rule = 'What is the result of the expression?';
@@ -19,10 +19,10 @@ const calculate = (num1, num2, operation) => {
 const operations = ['+', '-', '*'];
 
 const getGameData = () => {
-  const num1 = _.random(1, 49);
-  const num2 = _.random(1, 49);
+  const num1 = random(1, 49);
+  const num2 = random(1, 49);
 
-  const idx = _.random(0, operations.length - 1);
+  const idx = random(0, operations.length - 1);
   const operation = operations[idx];
 
   const task = `${num1} ${operation} ${num2}`;
